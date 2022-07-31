@@ -203,6 +203,9 @@ img {
 .menu__link {
   text-decoration: none;
 }
+.menu__link:hover {
+  text-decoration: underline;
+}
 
 .phone-number {
   font-size: 22px;
@@ -213,6 +216,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.phone-number:hover {
+  color: rgb(83, 189, 255);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .phone-number__icon-elem {
