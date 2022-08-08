@@ -1,0 +1,19 @@
+.order-section {
+    background: url(../img/form-bg.jpg) top center, #797979;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFFFFF;
+    background-blend-mode: multiply;
+
+    @include tablets {
+        min-height: rem(966px);
+    }
+
+    &--title {
+        color: #FFFFFF;
+
+        @include tablets {
+            padding-top: rem(175px);
+        }
+    }
+}

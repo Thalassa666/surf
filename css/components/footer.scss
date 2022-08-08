@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: rem(107px);
+
+      &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @include phones {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+}
