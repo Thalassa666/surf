@@ -23,7 +23,7 @@
         right: 0;
         transform: translateX(50%);
 
-        @include phones {
+        @include tablets {
             display: none;
         }
     }
