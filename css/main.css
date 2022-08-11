@@ -443,7 +443,7 @@ img {
 
 .section {
   height: 100vh;
-  min-height: 36.1111111111rem;
+  min-height: 44.4444444444rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -865,12 +865,7 @@ img {
   background-size: cover;
   color: #FFFFFF;
   background-blend-mode: multiply;
-  height: 100vh;
-}
-@media screen and (max-width: 768px) {
-  .order-section {
-    min-height: 53.6666666667rem;
-  }
+  height: 100%;
 }
 .order-section--title {
   color: #FFFFFF;
@@ -885,7 +880,7 @@ img {
   background: url(../img/map.png) top center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 94vh;
+  height: 92%;
 }
 
 .footer {

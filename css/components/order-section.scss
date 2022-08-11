@@ -4,11 +4,9 @@
     background-size: cover;
     color: #FFFFFF;
     background-blend-mode: multiply;
-    height: 100vh;
+    height: 100%;
 
-    @include tablets {
-        min-height: rem(966px);
-    }
+    
 
     &--title {
         color: #FFFFFF;
