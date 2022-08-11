@@ -877,10 +877,11 @@ img {
 }
 
 .map-section {
-  background: url(../img/map.png) top center;
+  background: url(../img/map.png) center center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 92%;
+  height: 100vh;
+  min-height: 29.2222222222rem;
 }
 
 .footer {
@@ -890,7 +891,12 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   min-height: 5.9444444444rem;
+  background: #fff;
 }
 .footer__container {
   display: -webkit-box;

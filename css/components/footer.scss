@@ -1,7 +1,12 @@
 .footer {
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     min-height: rem(107px);
+    background: #fff;
 
       &__container {
         display: flex;
