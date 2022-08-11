@@ -632,6 +632,7 @@ img {
   .reviews__avatar {
     width: 7.2222222222rem;
     height: 7.2222222222rem;
+    margin-right: 0;
   }
 }
 
@@ -864,6 +865,7 @@ img {
   background-size: cover;
   color: #FFFFFF;
   background-blend-mode: multiply;
+  height: 100vh;
 }
 @media screen and (max-width: 768px) {
   .order-section {
@@ -883,7 +885,7 @@ img {
   background: url(../img/map.png) top center;
   background-repeat: no-repeat;
   background-size: cover;
-  max-height: 36.2222222222rem;
+  height: 94vh;
 }
 
 .footer {

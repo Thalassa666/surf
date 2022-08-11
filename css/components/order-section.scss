@@ -4,6 +4,7 @@
     background-size: cover;
     color: #FFFFFF;
     background-blend-mode: multiply;
+    height: 100vh;
 
     @include tablets {
         min-height: rem(966px);

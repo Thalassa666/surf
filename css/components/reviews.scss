@@ -21,6 +21,8 @@
     @include tablets {
         width: rem(130px);
         height: rem(130px);
+        margin-right: 0;
+        
     }
 }
 
