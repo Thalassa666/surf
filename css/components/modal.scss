@@ -1,0 +1,56 @@
+.modal {
+    display: none;
+
+    &.fancybox-content {
+        padding: 0 !important;
+    }
+  
+    &.error-modal {
+      .modal__content {
+        color: red;
+      }
+    }
+
+    .fancybox-button {
+        display: none;
+    }
+  
+  &__container {
+    min-width: rem(309px);
+    height: rem(176px);
+    display: flex;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  &__content {
+    margin-bottom: rem(15px);
+    font-style: normal;
+    font-weight: normal;
+    font-size: rem(18px);
+    line-height: rem(24px);
+    color: #000000;
+    }
+  
+  
+  
+  .bx-wrapper .bx-controls-direction a {
+    @include tablets {
+      top: 28%;
+      margin-top: 0;
+    }
+  }
+  
+  .bx-wrapper .bx-next {
+    @include tablets {
+      right: rem(-9px);
+    }
+  }
+  
+  .bx-wrapper .bx-prev {
+    left: rem(-9px);
+  }
+}

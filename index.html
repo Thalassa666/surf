@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Surfboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="./css/main.css">
 </head>
 
@@ -162,7 +164,7 @@
         <section class="section products">
             <div class="container">
                 <div class="products__wrap-list">
-                <ul class="products__list" id="slider">
+                <ul class="products__list proslider" id="slider">
                     <li class="products__item">
                         <div class="products__preview">
                             <img src="./img/longboard.png" alt="" class="products__img">
@@ -296,36 +298,78 @@
             <h2 class="section__title">Отзывы</h2>
             <div class="reviews">
                 <div class="reviews__display">
-                    <div class="reviews__display-inner">
-                        <div class="reviews__avatar">
-                            <img src="./img/olga.png" alt="olga" class="reviews__avatar-img">
-                        </div>
-                        <article class="reviews__content">
-                            <h3 class="reviews__title">Лучший дизайн</h3>
-                            <div class="reviews__text">
-                                <p>Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону 
-                                    я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! 
-                                    Она учла все мои предпочтения и комментарии. В итоге получился 
-                                    прекрасный дизайн. А я катаюсь на доске, которая мне нравится)
-                                </p>
+                    <ul class="reviews__list">
+                        <li class="reviews__item active" data-linked-with="one">
+                            <div class="reviews__display-inner">
+                                <div class="reviews__avatar">
+                                    <img src="./img/olga.png" alt="olga" class="reviews__avatar-img">
+                                </div>
+                                <article class="reviews__content">
+                                    <h3 class="reviews__title">Лучший дизайн</h3>
+                                    <div class="reviews__text">
+                                        <p>Я увидела доски на сайте и влюбилась в их дизайн. К летнему сезону 
+                                            я заказала себе доску в SurfBoard. Дизайнер команды - волшебница! 
+                                            Она учла все мои предпочтения и комментарии. В итоге получился 
+                                            прекрасный дизайн. А я катаюсь на доске, которая мне нравится)
+                                        </p>
+                                    </div>
+                                    <div class="reviews__author">Ольга Макарова</div>
+                                </article>
                             </div>
-                            <div class="reviews__author">Ольга Макарова</div>
-                        </article>
-                    </div>
+                        </li>
+                        <li class="reviews__item" data-linked-with="two">
+                            <div class="reviews__display-inner">
+                                <div class="reviews__avatar">
+                                    <img src="./img/mark.png" alt="mark" class="reviews__avatar-img">
+                                </div>
+                                <article class="reviews__content">
+                                    <h3 class="reviews__title">Нереальная скорость</h3>
+                                    <div class="reviews__text">
+                                        <p>Я занимаюсь профессиональным спортом. Доверил изготовление 
+                                            доски для соревнований ребятам из Surfboard и не пожалел: 
+                                            1 место на соревнованиях. 
+                                            Нереальная скорость, устойчивая, удобная и легкая: всё что 
+                                            нужно для победы на соревнованиях!
+                                        </p>
+                                    </div>
+                                    <div class="reviews__author">Марк Брюлов</div>
+                                </article>
+                            </div>
+                        </li>
+                        <li class="reviews__item" data-linked-with="three">
+                            <div class="reviews__display-inner">
+                                <div class="reviews__avatar">
+                                    <img src="./img/vasiliy.jpg" alt="vasiliy" class="reviews__avatar-img">
+                                </div>
+                                <article class="reviews__content">
+                                    <h3 class="reviews__title">Устойчивость и безопасность</h3>
+                                    <div class="reviews__text">
+                                        <p>Я заказывал доски для своих детей. Мне было важно, чтобы они 
+                                            были устойчивые, так как безопасность детей на первом месте. 
+                                            Доски были изготовлены по индивидуальным замерам с учетом роста 
+                                            и веса каждого ребенка. Теперь дети катаются и им нравится!
+                                        </p>
+                                    </div>
+                                    <div class="reviews__author">Василий Поперечный</div>
+                                </article>
+                            </div>
+                        </li>
+                    </ul>
+                    
                 </div>
                 <ul class="reviews__switcher">
-                    <li class="reviews__switcher-item interactive-avatar interactive-avatar--active">
-                        <a href="#" class="interactive-avatar-link">
+                    <li class="reviews__switcher-item interactive-avatar active">
+                        <a data-open="one" class="interactive-avatar-link reviews__switcher-link">
                             <img src="./img/olga.png" alt="olga" class="interactive-avatar__img">
                         </a>
                     </li>
                     <li class="reviews__switcher-item interactive-avatar">
-                        <a href="#" class="interactive-avatar-link">
+                        <a data-open="two" class="interactive-avatar-link reviews__switcher-link">
                             <img src="./img/mark.png" alt="mark" class="interactive-avatar__img">
                         </a>
                     </li>
                     <li class="reviews__switcher-item interactive-avatar">
-                        <a href="#" class="interactive-avatar-link">
+                        <a data-open="three" class="interactive-avatar-link reviews__switcher-link">
                             <img src="./img/vasiliy.jpg" alt="vasiliy" class="interactive-avatar__img">
                         </a>
                     </li>
@@ -333,43 +377,150 @@
             </div>
             </div>
         </section>
+            <section class="section team">
+                <div class="container">
+                    <h2 class="section__title team__title">Команда</h2>
+                    <ul class="team__list team__list--desctop">
+                        <li class="team__member">
+                            <img src="./img/boris_team.png" alt="boris" class="team__member-pic">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Борис Федорович</h3> 
+                            </a>
+                                <div class="team__member-content">
+                                    <div class="team__member-content-block">
+                                        <div class="team__member-spec">Главный технолог</div>
+                                        <div class="team__member-optain">Отвечает за материалы и разработку досок</div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="team__member">
+                            <img src="./img/olga_team.png" alt="olga" class="team__member-pic">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Ольга Невзорова</h3>
+                            </a>
+                                <div class="team__member-content">
+                                    <div class="team__member-content-block">
+                                        <div class="team__member-spec">Дизайнер</div>
+                                        <div class="team__member-optain">Создает дизайн серфбордов</div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="team__member">
+                            <img src="./img/ingvar_team.png" alt="ingvar" class="team__member-pic">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Ингвар Нильсон</h3>
+                            </a>
+                                <div class="team__member-content">
+                                    <div class="team__member-content-block">
+                                        <div class="team__member-spec">Спортсмен</div>
+                                        <div class="team__member-optain">Участвует в разработке серфбордов</div>
+                                    </div>
+                                </div>
+                        </li>
+                        <li class="team__member">
+                            <img src="./img/kate_team.png" alt="kate" class="team__member-pic">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Екатерина Иванова</h3>
+                            </a>
+                                <div class="team__member-content">
+                                    <div class="team__member-content-block">
+                                        <div class="team__member-spec">Тестировщик</div>
+                                        <div class="team__member-optain">Отвечает за разработку новых продуктов</div>
+                                    </div>
+                                </div>
+                        </li>
+                    </ul>
+                    <!-- mobile -->
+                    <ul class="team__list team__list--mobile">
+                        <li class="team__member">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Борис Федорович</h3>
+                            </a>
+                            <div class="team__member-content">
+                                <div class="team__member-content-block">
+                                    <img src="./img/boris_team.png" alt="boris" class="team__member-pic">
+                                    <div class="team__member-spec">Главный технолог</div>
+                                    <div class="team__member-optain">Отвечает за материалы и разработку досок</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__member">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Ольга Невзорова</h3>
+                            </a>
+                            <div class="team__member-content">
+                                <div class="team__member-content-block">
+                                    <img src="./img/olga_team.png" alt="olga" class="team__member-pic">
+                                    <div class="team__member-spec">Дизайнер</div>
+                                    <div class="team__member-optain">Создает дизайн серфбордов</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__member">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Ингвар Нильсон</h3>
+                            </a>
+                            <div class="team__member-content">
+                                <div class="team__member-content-block">
+                                    <img src="./img/ingvar_team.png" alt="ingvar" class="team__member-pic">
+                                    <div class="team__member-spec">Спортсмен</div>
+                                    <div class="team__member-optain">Участвует в разработке серфбордов</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="team__member">
+                            <a class="team__member-link">
+                                <h3 class="team__member-name">Екатерина Иванова</h3>
+                            </a>
+                            <div class="team__member-content">
+                                <div class="team__member-content-block">
+                                    <img src="./img/kate_team.png" alt="kate" class="team__member-pic">
+                                    <div class="team__member-spec">Тестировщик</div>
+                                    <div class="team__member-optain">Отвечает за разработку новых продуктов</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
         <section class="section order-section">
             <div class="container">
                 <h2 class="section__title order-section--title">закажите доску</h2>
                 <form class="form">
+                    <input type="hidden" name="to" value="somewhere@mail.com">
                     <div class="form__col">
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__title">Имя</div>
-                                <input type="text" class="form__input"></input>
+                                <input type="text" name="name" class="form__input"></input>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">Телефон</div>
-                                <input type="tel" class="form__input"></input>
+                                <input type="tel" name="phone" class="form__input"></input>
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__title">Улица</div>
-                                <input type="text" class="form__input"></input>
+                                <input type="text" name="street" class="form__input"></input>
                             </label>
                         </div>
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__title">Дом</div>
-                                <input type="text" class="form__input"></input>
+                                <input type="text" name="home" class="form__input"></input>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">Корпус</div>
-                                <input type="text" class="form__input"></input>
+                                <input type="text" name="part" class="form__input"></input>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">Квартира</div>
-                                <input type="text" class="form__input"></input>
+                                <input type="text" name="appartament" class="form__input"></input>
                             </label>
                             <label class="form__block">
                                 <div class="form__title">Этаж</div>
-                                <input type="text" class="form__input"></input>
+                                <input type="text" name="floor" class="form__input"></input>
                             </label>
                         </div>
                     </div>
@@ -377,7 +528,7 @@
                         <div class="form__row">
                             <label class="form__block">
                                 <div class="form__title">Комментарий</div>
-                                <textarea class="form__input form__input--textarea"></textarea>
+                                <textarea name="comment" class="form__input form__input--textarea"></textarea>
                             </label>
                         </div>
                         <div class="form__controls">
@@ -526,7 +677,22 @@
             </nav>
         
    </div> 
+
+   <div class="modal" id="modal">
+    <div class="modal__container">
+      <div class="modal__content"></div>
+      <div class="modal__button-container">
+        <button class="modal__button btn">Закрыть</button>
+      </div>
+    </div>
+  </div>
+
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+   <script src="./js/slider.js"></script>
    <script src="./js/index.js"></script>
+   <script src="./js/accord.js"></script>
+   <script src="./js/modal.js"></script>
 </body>
 </html>

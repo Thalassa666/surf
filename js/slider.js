@@ -1,0 +1,4 @@
+$('.proslider').bxSlider({
+    pager: false
+});
+
