@@ -1,0 +1,10 @@
+.player-section {
+    background: #F8FAF9;
+    height: 100vh;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

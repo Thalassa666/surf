@@ -1,0 +1,162 @@
+.player {
+    position: relative;
+
+    &__mp4 {
+        display: flex;
+        width: 100%;
+        height: 370px;
+        @include tablets {
+            width: 100%;
+            height: auto;
+        }
+    }
+  
+    &__controls {
+      display: flex;
+      align-items: center;
+      height: rem(35px);
+      background: #151515;
+      padding: 0 22px 0 10px;
+    }
+
+    &__video-btn {
+        height: 109px;
+        width: 75px;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: transparent;
+        border: none;
+    }
+    
+    &__start {
+      outline: transparent;
+      border: 0px;
+      background: url('img/pause-button.svg') center center/cover no-repeat;
+      height: 16px;
+      width: 11px;
+      cursor: pointer;
+      position: absolute;
+      left: 17px;
+  
+      @include tablets {
+        left: 15px;
+      }
+  
+      @include phones {
+        left: 10px;
+      }
+    }
+  
+    &__mute {
+      outline: transparent;
+      border: 0;
+      background: url('img/sound-button.svg') center center/cover no-repeat;
+      height: 16px;
+      width: 11px;
+      cursor: pointer;
+      position: absolute;
+      right: 105px;
+  
+      @include tablets {
+        right: 95px;
+      }
+  
+      @include phones {
+        right: 63px;
+      }
+    }
+  
+    &__playback {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      width: 425px;
+      height: 5px;
+      left: 57px;
+      background: #333333;
+  
+      @include tablets {
+        width: 220px;
+        left: 51px;
+      }
+  
+      @include phones {
+        width: 268px;
+        left: 38px;
+  
+      }
+  
+      &-button {
+        width: 15px;
+        height: 15px;
+        border: 1px solid #FEDB3F;
+        background: #FEDB3F;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        left: 0;
+  
+        @include tablets {
+          width: 14px;
+          height: 14px;
+        }
+  
+        @include phones {
+          width: 9px;
+          height: 9px;
+        }
+      }
+    }
+  
+    &__sound {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      width: 58px;
+      height: 5px;
+      right: 23px;
+      background: #333333;
+  
+      @include tablets {
+        width: 52px;
+        right: 21px;
+      }
+  
+      @include phones {
+        width: 35px;
+        right: 14px;
+      }
+  
+  
+      &-button {
+        width: 9px;
+        height: 14px;
+        border: 1px solid #FEDB3F;
+        background: #FEDB3F;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        right: 0;
+  
+        @include tablets {
+          width: 11px;
+          height: 11px;
+        }
+  
+        @include phones {
+          width: 7px;
+          height: 7px;
+        }
+      }
+  
+      &-button.muted {
+        left: 0 !important;
+      }
+    }
+  }
+
