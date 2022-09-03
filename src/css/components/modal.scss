@@ -1,22 +1,14 @@
 .modal {
     display: none;
-
-    &.fancybox-content {
-        padding: 0 !important;
-    }
   
     &.error-modal {
       .modal__content {
         color: red;
       }
     }
-
-    .fancybox-button {
-        display: none;
-    }
   
   &__container {
-    min-width: rem(309px);
+    min-width: rem(109px);
     height: rem(176px);
     display: flex;
     background: #fff;

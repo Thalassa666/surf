@@ -41,18 +41,12 @@ $('.form').submit(e => {
             },
             success: data => {
                 content.text(data.message);
-                $.fancybox.open({
-                src: "#modal", 
-                type: "inline",
-            });
+                $('#modal').css('display', 'flex');
             },
             error: data => {
                 content.text(data.message);
                 modal.addClass("error-modal");
-                $.fancybox.oopen({
-                    scr: "#modal",
-                    type: "inline",
-                });
+                $('#modal').css('display', 'flex');
             }
         });
     };
@@ -63,7 +57,6 @@ $('.form').submit(e => {
 
 $('.modal__button').on("click", e =>{
     e.preventDefault();
-
-    $.fancybox.close();
+    $('#modal').hide();
 });
 
