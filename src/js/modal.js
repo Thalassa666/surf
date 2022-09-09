@@ -27,9 +27,13 @@ $('.form').submit(e => {
     
     const isValid = validateFields(form, [name, phone, comment, to]);
 
-
+    const xhr = new XMLHttpRequest();
 
     if (isValid) {
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.setRequestHeader('content-type', 'application/json');
+
+
         $.ajax({
             url: "https://webdev-api.loftschool.com/sendmail",
             method: "post",
@@ -41,12 +45,12 @@ $('.form').submit(e => {
             },
             success: data => {
                 content.text(data.message);
-                $('#modal').css('display', 'flex');
+                $('.modal').css('display', 'flex');
             },
             error: data => {
-                content.text(data.message);
+                content.text('Failed');
                 modal.addClass("error-modal");
-                $('#modal').css('display', 'flex');
+                $('.modal').css('display', 'flex');
             }
         });
     };
@@ -57,6 +61,6 @@ $('.form').submit(e => {
 
 $('.modal__button').on("click", e =>{
     e.preventDefault();
-    $('#modal').hide();
+    $('.modal').hide();
 });
 
